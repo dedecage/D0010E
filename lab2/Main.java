@@ -1,7 +1,6 @@
 package lab2;
 
 import lab2.Driver;
-import lab2.level.Room;
 
 public class Main {
 

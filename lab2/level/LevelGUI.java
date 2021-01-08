@@ -27,7 +27,7 @@ public class LevelGUI implements Observer {
 
 		// TODO: You should change 200 to a value
 		// depending on the size of the level
-		d = new Display(lv, 200, 200);
+		d = new Display(lv, lv.list.length*100, lv.list.length*70);
 
 		frame.getContentPane().add(d);
 		frame.pack();
