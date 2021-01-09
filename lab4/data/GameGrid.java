@@ -81,10 +81,10 @@ public class GameGrid extends Observable {
 	}
 
 	/**
-	 * Check if a player has 5 in row
+	 * Checks win condition
 	 * 
 	 * @param player the player to check for
-	 * @return true if player has 5 in row, false otherwise
+	 * @return true if player has INROW in row, false otherwise
 	 */
 	public boolean isWinner(int player) {
 
@@ -94,7 +94,7 @@ public class GameGrid extends Observable {
 		for (int x = 0; x < list.length; x++) {
 			for (int y = 0; y < list.length; y++) {
 
-				// Checks for 5 in row vertically spanning to the right
+				// Checks for INROW vertically spanning to the right
 				while (span < INROW && x + span < list.length && list[x + span++][y] == player) {
 					counter++;
 					if (counter == INROW) {
@@ -104,7 +104,7 @@ public class GameGrid extends Observable {
 				counter = 0;
 				span = 0;
 
-				// Checks for 5 in a row horizontally spanning downwards
+				// Checks for INROW horizontally spanning downwards
 				while (span < INROW && y + span < list.length && list[x][y + span++] == player) {
 					counter++;
 					if (counter == INROW) {
@@ -114,7 +114,7 @@ public class GameGrid extends Observable {
 				counter = 0;
 				span = 0;
 
-				// Checks for 5 in a row down right diagonally
+				// Checks for INROW down right diagonally
 				while (x + span < list.length && y + span < list.length && list[x + span][y + span++] == player) {
 					counter++;
 					if (counter == INROW) {
@@ -124,7 +124,7 @@ public class GameGrid extends Observable {
 				counter = 0;
 				span = 0;
 
-				// Checks for 5 in a row down left diagonally
+				// Checks for INROW down left diagonally
 				while (x - span >= 0 && y + span < list.length && list[x - span][y + span++] == player) {
 					counter++;
 					if (counter == INROW) {
