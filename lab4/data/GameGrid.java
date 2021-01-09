@@ -104,7 +104,7 @@ public class GameGrid extends Observable {
 				counter = 0;
 				span = 0;
 
-				// Checks for INROW horizontally spanning downwards
+				// Horizontally spanning downwards
 				while (span < INROW && y + span < list.length && list[x][y + span++] == player) {
 					counter++;
 					if (counter == INROW) {
@@ -114,7 +114,7 @@ public class GameGrid extends Observable {
 				counter = 0;
 				span = 0;
 
-				// Checks for INROW down right diagonally
+				// Down right diagonal
 				while (x + span < list.length && y + span < list.length && list[x + span][y + span++] == player) {
 					counter++;
 					if (counter == INROW) {
@@ -124,7 +124,7 @@ public class GameGrid extends Observable {
 				counter = 0;
 				span = 0;
 
-				// Checks for INROW down left diagonally
+				// Down left diagonal
 				while (x - span >= 0 && y + span < list.length && list[x - span][y + span++] == player) {
 					counter++;
 					if (counter == INROW) {
