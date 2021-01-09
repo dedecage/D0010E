@@ -16,7 +16,7 @@ public class GomokuGameState extends Observable implements Observer{
 	private final int DEFAULT_SIZE = 10;
 	private GameGrid gameGrid;
 	
-    //Possible game states
+    	//Possible game states
 	private final int NOT_STARTED = 0;
 	private static final int MY_TURN = 1;
 	private static final int OTHERS_TURN = 2;
