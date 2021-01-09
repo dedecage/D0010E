@@ -94,7 +94,7 @@ public class GameGrid extends Observable {
 		for (int x = 0; x < list.length; x++) {
 			for (int y = 0; y < list.length; y++) {
 
-				// Checks for INROW vertically spanning to the right
+				// Vertically spanning to the right
 				while (span < INROW && x + span < list.length && list[x + span++][y] == player) {
 					counter++;
 					if (counter == INROW) {
